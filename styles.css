@@ -1,0 +1,297 @@
+/* Resetting and setting up fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+}
+
+.container-one {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  min-height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px; /* Added gap for spacing */
+}
+
+/* Profile Card */
+.profile-card {
+  background: #111;
+  width: 100%;
+  max-width: 400px;
+  padding: 3rem;
+  border-radius: 10px;
+  min-height: 400px;
+  position: relative;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile-card .profile-picture img {
+  border-radius: 10px;
+  width: 100%; /* Ensures responsive images */
+}
+
+.profile-card .profile-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.profile-details .intro h2 {
+  margin-top: 20px;
+  color: #fff;
+}
+
+.profile-details .intro h4 {
+  background: #1d1d1d;
+  font-weight: 400;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 8px;
+  color: #fff;
+}
+
+.profile-details .intro .social i {
+  color: #fff;
+  font-size: 16px;
+  background-color: #222;
+  margin: 5px;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.profile-details .intro .social i:hover {
+  transform: scale(1.2);
+  border: 1px solid #ffcc00;
+}
+
+/* Contact Info */
+.contact-info .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.contact-info .row .icon {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #ffcc00;
+  margin-right: 0.5rem;
+}
+
+.contact-info .row .content span {
+  font-size: 12px;
+  color: #bbb;
+}
+
+.btnCv {
+  background: #ffcc00;
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* About Section */
+.about {
+  max-width: 800px;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  background-color: #222;
+  color: #fff;
+}
+
+.about h1 {
+  color: #ffcc00;
+  margin-bottom: 1.1rem;
+  position: relative;
+  display: inline-block;
+  font-size: 3.5rem;
+}
+
+.about p {
+  color: #bbb;
+  margin: 1rem 0;
+}
+
+/* Portfolio Section */
+.portfolio {
+  text-align: left;
+  padding: 50px 20px;
+  background-color: #111;
+}
+
+.portfolio h1 {
+  color: #ffcc00;
+  margin-bottom: 1.1rem;
+  position: relative;
+  display: inline-block;
+  font-size: 3.5rem;
+}
+
+.portfolio-container-one,
+.portfolio-container-two {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+  box-shadow: 5px 10px #888888;
+  flex-wrap: wrap; /* Ensures items stack on smaller screens */
+  justify-content: space-between;
+}
+
+/* Portfolio Item */
+.portfolio-item {
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 48%; /* Adjusted to 48% for better layout */
+}
+
+.portfolio-item img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.portfolio-links {
+  margin-top: 10px;
+}
+
+.portfolio-links a {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 15px;
+  background: #ffcc00;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.portfolio-links a:hover {
+  background: black;
+  color: #ffcc00;
+}
+
+/* About & Portfolio Titles: after pseudo-element */
+.about h1::after,
+.portfolio h1::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: -50%;
+  width: 45%;
+  height: 3px;
+  background: #ffcc00;
+}
+
+@media (max-width: 768px) {
+  .about h1::after,
+  .portfolio h1::after {
+    width: 30%;
+    right: -30%;
+  }
+
+  /* Flex adjustments for mobile */
+  .portfolio-container-one,
+  .portfolio-container-two {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .portfolio-item {
+    width: 100%; /* Full width on small screens */
+  }
+
+  /* Profile adjustments */
+  .profile-card {
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about h1::after,
+  .portfolio h1::after {
+    width: 20%;
+    right: -20%;
+  }
+
+  .about,
+  .portfolio {
+    padding: 2rem; /* Reduced padding on mobile */
+  }
+
+  .profile-card {
+    padding: 1rem;
+  }
+}
+
+
+.contact h1 {
+  display: flex;
+  color: #ffcc00;
+  margin-bottom: 1.1rem;
+  position: relative;
+  display: inline-block;
+  font-size: 3.5rem;
+  align-items: flex-end;
+}
+
+.contact h1::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: -50%;
+  width: 45%;
+  height: 3px;
+  background: #ffcc00;
+}
+
+/* Contact Section */
+#contact a {
+  font-size: 1.1rem;
+  color: #fbd14b;
+  text-decoration: none;
+  border: 2px solid #fbd14b;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+#contact a:hover {
+  color: #ffcc00;
+}
