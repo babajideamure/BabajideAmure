@@ -163,9 +163,7 @@ hr {
   font-size: 3.5rem;
 }
 
-.portfolio-container-one,
-.portfolio-container-two,
-.portfolio-container-three {
+.portfolio-container {
   display: flex;
   padding: 2rem;
   gap: 2rem;
