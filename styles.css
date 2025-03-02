@@ -164,7 +164,8 @@ hr {
 }
 
 .portfolio-container-one,
-.portfolio-container-two {
+.portfolio-container-two,
+.portfolio-container-three {
   display: flex;
   padding: 2rem;
   gap: 2rem;
@@ -208,6 +209,27 @@ hr {
   background: black;
   color: #ffcc00;
 }
+
+.youtube-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff0000;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.youtube-button:hover {
+  background-color: #cc0000;
+}
+
+#aws-videos h2,
+#aws-videos p {
+  color: black;
+},
 
 
 @media (max-width: 768px) {
@@ -327,6 +349,25 @@ hr {
   margin-bottom: 20px;
 }
 
+#aws-videos {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f1c40f;
+}
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+iframe {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+
 /* Form group and input styling */
 .form-group {
   margin-bottom: 20px;
@@ -389,5 +430,17 @@ textarea:focus {
 @media (max-width: 768px) {
   .contact-form {
     padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  iframe {
+      width: 90%;
+      height: auto;
   }
 }
