@@ -231,14 +231,12 @@ hr {
   color: black;
 }
 
-
 .contact h1 {
   display: flex;
   color: #ffcc00;
   margin-bottom: 1.1rem;
   font-size: 3.5rem;
 }
-
 
 #contact a {
   font-size: 1.1rem;
@@ -281,14 +279,6 @@ hr {
 }
 
 /* General form styling */
-.contact-form p {
-  font-size: 18px;
-  text-align: center;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-/* General form styling */
 .contact-form {
   max-width: 600px;
   margin: 20px auto;
@@ -301,7 +291,7 @@ hr {
 .contact-form p {
   font-size: 18px;
   text-align: center;
-  color: #f1c40f; 
+  color: #f1c40f; /* Yellow color to match your theme */
   margin-bottom: 20px;
 }
 
@@ -388,9 +378,7 @@ textarea:focus {
  
 }
 
-//* Add these responsive improvements to your existing CSS */
-
-/* 1. Fix the container layout */
+/* Container layout */
 .container-one {
   padding: 1rem;
   gap: 2rem;
@@ -402,7 +390,7 @@ textarea:focus {
   margin: 0 auto;
 }
 
-/* 2. Make profile card more flexible */
+/* profile card */
 .profile-card {
   max-width: 100%;
   min-width: 300px;
@@ -412,10 +400,10 @@ textarea:focus {
 .profile-card .profile-picture img {
   max-width: 100%;
   height: auto;
-  width: 260px; /* Remove fixed width from HTML and control via CSS */
+  width: 260px; 
 }
 
-/* 3. Responsive portfolio grid */
+/* portfolio grid */
 .portfolio-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -424,11 +412,11 @@ textarea:focus {
 }
 
 .portfolio-item {
-  width: 100%; /* Remove the 48% width */
+  width: 100%; 
   min-width: 300px;
 }
 
-/* 4. Responsive video container */
+/* video container */
 .video-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -440,16 +428,16 @@ textarea:focus {
   width: 100%;
   max-width: 315px;
   height: auto;
-  aspect-ratio: 9/16; /* Maintain aspect ratio */
+  aspect-ratio: 9/16; 
 }
 
-/* 5. Responsive form */
+/* form */
 .contact-form {
   max-width: 100%;
   margin: 0 1rem;
 }
 
-/* 6. Update your media queries */
+/* media queries */
 @media(max-width: 768px) {
   /* Typography scaling */
   .about h1,
@@ -492,10 +480,10 @@ textarea:focus {
   .video-container iframe {
     width: 100%;
     max-width: 100%;
-    height: 400px; /* Set fixed height for mobile */
+    height: 400px; 
   }
   
-  /* Social icons - make them larger on mobile */
+  /* Social icons */
   .profile-details .intro .social i {
     height: 40px;
     width: 40px;
@@ -627,7 +615,7 @@ textarea:focus {
   .portfolio-links a,
   .btnCv,
   .submit-btn {
-    min-height: 44px; /* Minimum touch target size */
+    min-height: 44px; 
     padding: 12px 20px;
   }
   
