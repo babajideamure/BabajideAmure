@@ -1,5 +1,6 @@
-/* Resetting and setting up fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -47,6 +48,7 @@ hr {
 .profile-card .profile-picture img {
   border-radius: 10px;
   width: 100%;
+  object-fit: cover;
 }
 
 .profile-card .profile-details {
@@ -167,8 +169,8 @@ hr {
   display: flex;
   padding: 2rem;
   gap: 2rem;
-  flex-wrap: wrap; /* Ensures items stack on smaller screens */
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* Portfolio Item */
@@ -227,43 +229,8 @@ hr {
 #aws-videos h2,
 #aws-videos p {
   color: black;
-},
-
-
-@media (max-width: 768px) {
-  .about h1::after,
-  .portfolio h1::after {
-    width: 30%;
-    right: -30%;
-  }
-
-  .portfolio-item {
-  width: 100%; /* Full width on small screens */
-  }
-
-  .profile-card {
-    padding: 1.5rem;
-    width: 100%;
-    max-width: 350px;
-  }
 }
 
-@media (max-width: 480px) {
-  .about h1::after,
-  .portfolio h1::after {
-    width: 20%;
-    right: -20%;
-  }
-
-  .about,
-  .portfolio {
-    padding: 2rem;
-  }
-
-  .profile-card {
-    padding: 1rem;
-  }
-}
 
 .contact h1 {
   display: flex;
@@ -314,15 +281,6 @@ hr {
 }
 
 /* General form styling */
-.contact-form {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 .contact-form p {
   font-size: 18px;
   text-align: center;
@@ -335,7 +293,7 @@ hr {
   max-width: 600px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #000; /* Black background */
+  background-color: #000; 
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -343,7 +301,7 @@ hr {
 .contact-form p {
   font-size: 18px;
   text-align: center;
-  color: #f1c40f; /* Yellow text */
+  color: #f1c40f; 
   margin-bottom: 20px;
 }
 
@@ -365,8 +323,6 @@ iframe {
   border-radius: 10px;
 }
 
-
-/* Form group and input styling */
 .form-group {
   margin-bottom: 20px;
 }
@@ -378,7 +334,7 @@ iframe {
 
 label {
   font-size: 14px;
-  color: #f1c40f; /* Yellow text */
+  color: #f1c40f; 
   margin-bottom: 5px;
 }
 
@@ -387,26 +343,26 @@ input[type="email"],
 textarea {
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #f1c40f; /* Yellow border */
+  border: 1px solid #f1c40f; 
   border-radius: 5px;
   width: 100%;
   box-sizing: border-box;
-  background-color: #333; /* Dark background for inputs */
-  color: #fff; /* White text inside inputs */
+  background-color: #333; 
+  color: #fff; 
   transition: border-color 0.3s ease;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
-  border-color: #f1c40f; /* Yellow border on focus */
+  border-color: #f1c40f; 
   outline: none;
 }
 
 /* Submit button styling */
 .submit-btn {
-  background-color: #f1c40f; /* Yellow background */
-  color: #000; /* Black text */
+  background-color: #f1c40f; 
+  color: #000; 
   padding: 12px 20px;
   border: none;
   border-radius: 5px;
@@ -417,28 +373,276 @@ textarea:focus {
 }
 
 .submit-btn:hover {
-  background-color: #e0b90f; /* Darker yellow on hover */
+  background-color: #e0b90f; 
 }
 
 .submit-btn:focus {
   outline: none;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .contact-form {
-    padding: 15px;
+@media(max-width:768px){
+ 
+}
+
+@media(max-width:496px){
+ 
+}
+
+//* Add these responsive improvements to your existing CSS */
+
+/* 1. Fix the container layout */
+.container-one {
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.container-two {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 2. Make profile card more flexible */
+.profile-card {
+  max-width: 100%;
+  min-width: 300px;
+  margin: 0 auto;
+}
+
+.profile-card .profile-picture img {
+  max-width: 100%;
+  height: auto;
+  width: 260px; /* Remove fixed width from HTML and control via CSS */
+}
+
+/* 3. Responsive portfolio grid */
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.portfolio-item {
+  width: 100%; /* Remove the 48% width */
+  min-width: 300px;
+}
+
+/* 4. Responsive video container */
+.video-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+}
+
+.video-container iframe {
+  width: 100%;
+  max-width: 315px;
+  height: auto;
+  aspect-ratio: 9/16; /* Maintain aspect ratio */
+}
+
+/* 5. Responsive form */
+.contact-form {
+  max-width: 100%;
+  margin: 0 1rem;
+}
+
+/* 6. Update your media queries */
+@media(max-width: 768px) {
+  /* Typography scaling */
+  .about h1,
+  .portfolio h1,
+  .contact h1 {
+    font-size: 2.5rem;
+  }
+  
+  /* Profile card adjustments */
+  .profile-card {
+    padding: 2rem 1rem;
+    margin: 1rem;
+  }
+  
+  .profile-card .profile-picture img {
+    width: 200px;
+  }
+  
+  /* Container adjustments */
+  .container-one {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  /* Portfolio grid - single column on mobile */
+  .portfolio-container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  
+  .portfolio-item {
+    min-width: auto;
+  }
+  
+  /* Video container - single column */
+  .video-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .video-container iframe {
+    width: 100%;
+    max-width: 100%;
+    height: 400px; /* Set fixed height for mobile */
+  }
+  
+  /* Social icons - make them larger on mobile */
+  .profile-details .intro .social i {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 18px;
+  }
+  
+  /* Contact info - stack vertically on mobile */
+  .contact-info .row {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  
+  .contact-info .row .icon {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Footer adjustments */
+  .footer .footer-content .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
-@media (max-width: 768px) {
-  .video-container {
-      flex-direction: column;
-      align-items: center;
+@media(max-width: 496px) {
+  /* Even smaller screens */
+  .about h1,
+  .portfolio h1,
+  .contact h1 {
+    font-size: 2rem;
   }
+  
+  .profile-card {
+    padding: 1.5rem 1rem;
+    margin: 0.5rem;
+  }
+  
+  .profile-card .profile-picture img {
+    width: 150px;
+  }
+  
+  /* About section padding */
+  .about {
+    padding: 1.5rem;
+  }
+  
+  /* Portfolio links - stack vertically */
+  .portfolio-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .portfolio-links a {
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Video iframe smaller */
+  .video-container iframe {
+    height: 350px;
+  }
+  
+  /* Contact form adjustments */
+  .contact-form {
+    margin: 0 0.5rem;
+    padding: 1rem;
+  }
+  
+  .submit-btn {
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+  
+  /* Social icons responsive */
+  .profile-details .intro .social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
 
-  iframe {
-      width: 90%;
-      height: auto;
+/* 7. Additional responsive utilities */
+@media(max-width: 360px) {
+  /* Very small screens */
+  .container-one {
+    padding: 0.5rem;
   }
+  
+  .about h1,
+  .portfolio h1,
+  .contact h1 {
+    font-size: 1.8rem;
+  }
+  
+  .profile-card {
+    padding: 1rem;
+    margin: 0.25rem;
+  }
+  
+  .about {
+    padding: 1rem;
+  }
+  
+  .portfolio-container {
+    padding: 0.5rem;
+  }
+  
+  .video-container iframe {
+    height: 300px;
+  }
+}
+
+/* 8. Landscape orientation for mobile */
+@media(max-width: 768px) and (orientation: landscape) {
+  .video-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .video-container iframe {
+    height: 300px;
+  }
+}
+
+/* 9. Improve touch targets for mobile */
+@media(max-width: 768px) {
+  .portfolio-links a,
+  .btnCv,
+  .submit-btn {
+    min-height: 44px; /* Minimum touch target size */
+    padding: 12px 20px;
+  }
+  
+  .social i {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* 10. Fix horizontal scrolling issues */
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.video-container iframe {
+  max-width: 100%;
 }
